@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std; 
+ 
+// Recursive Function int recursivePower(int base, int exp) 
+{     if(exp == 0)         return 1; 
+ 
+    return base * recursivePower(base, exp - 1); 
+} 
+ 
+// Iterative Function int iterativePower(int base, int exp) 
+{     int result = 1; 
+ 
+    for(int i = 1; i <= exp; i++)         result *= base; 
+ 
+    return result; 
+} 
+ 
+int main() 
+{     int base, exp; 
+ 
+    cout << "Enter base: ";     cin >> base; 
+ 
+    cout << "Enter exponent: ";     cin >> exp; 
+ 
+    cout << "\nIterative Power = " 
+         << iterativePower(base, exp); 
+ 
+    cout << "\nRecursive Power = " 
+         << recursivePower(base, exp); 
+ 
+Enrollment no:92400118266                                                                                                                          |1   
+  
+ 
+    return 0; 
+} 
